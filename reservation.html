@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVI-BOOK | Réservation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">SERVI-BOOK</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reservation.html" class="active">Réserver</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== SECTION FORMULAIRE ===== -->
+    <section class="about">
+        <h3>Réservez votre service</h3>
+        <p>Remplissez le formulaire pour réserver un service.</p>
+    </section>
+
+    <section class="reservation-form" style="padding: 40px; display:flex; justify-content:center;">
+        <form id="bookingForm" style="max-width:500px; width:100%; background:#f4f6f8; padding:30px; border-radius:10px;">
+            
+            <label for="name">Nom complet :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+            <label for="phone">Téléphone :</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ex: 77XXXXXXX" required>
+
+            <label for="service">Service :</label>
+            <select id="service" name="service" required>
+                <option value="">-- Choisissez un service --</option>
+                <option value="CV Professionnel">CV Professionnel</option>
+                <option value="Lettre de motivation">Lettre de motivation</option>
+                <option value="Affiche & Design">Affiche & Design</option>
+                <option value="Site vitrine">Site vitrine</option>
+            </select>
+
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit" class="btn" style="margin-top:20px;">Réserver</button>
+        </form>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 SERVI-BOOK — Tous droits réservés</p>
+    </footer>
+
+    <!-- ===== SCRIPT JS ===== -->
+    <script src="js/reservation.js"></script>
+
+</body>
+</html>

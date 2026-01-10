@@ -1,0 +1,193 @@
+/* =========================
+   RESET DE BASE
+   ========================= */
+
+/* Supprime les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Police générale du site */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f6f8;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+header {
+    background-color: #0d6efd;
+    padding: 15px 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    text-decoration: underline;
+}
+
+/* =========================
+   HERO (BANNIÈRE)
+   ========================= */
+
+.hero {
+    height: 80vh;
+    background-image: url("../assets/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Filtre sombre sur l’image */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* Contenu au-dessus de l’image */
+.hero * {
+    position: relative;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Boutons */
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0d6efd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #084298;
+}
+
+.btn-secondary {
+    background-color: #198754;
+}
+
+.btn-secondary:hover {
+    background-color: #146c43;
+}
+
+/* =========================
+   SECTION À PROPOS
+   ========================= */
+
+.about {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #f4f6f8;
+    padding: 25px;
+    border-radius: 10px;
+    width: 260px;
+}
+
+.feature h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+   ========================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

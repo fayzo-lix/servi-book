@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVI-BOOK | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">SERVI-BOOK</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reservation.html">Réserver</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== SECTION DASHBOARD ===== -->
+    <section class="about">
+        <h3>Liste des réservations</h3>
+        <p>Visualisez toutes les réservations effectuées.</p>
+    </section>
+
+    <section style="padding:40px; display:flex; justify-content:center;">
+        <div style="width:90%; max-width:900px;">
+
+            <!-- Recherche par nom et filtre par service -->
+            <div style="margin-bottom:20px; display:flex; gap:10px; flex-wrap:wrap;">
+                <input type="text" id="searchName" placeholder="Rechercher par nom" style="padding:8px; flex:1; border-radius:5px; border:1px solid #ccc;">
+                <select id="filterService" style="padding:8px; border-radius:5px; border:1px solid #ccc;">
+                    <option value="">-- Filtrer par service --</option>
+                    <option value="CV Professionnel">CV Professionnel</option>
+                    <option value="Lettre de motivation">Lettre de motivation</option>
+                    <option value="Affiche & Design">Affiche & Design</option>
+                    <option value="Site vitrine">Site vitrine</option>
+                </select>
+            </div>
+
+            <!-- Bouton pour tout supprimer -->
+            <button id="clearAll" class="btn btn-secondary" style="margin-bottom:20px;">Supprimer toutes les réservations</button>
+
+            <!-- Tableau des réservations -->
+            <table id="reservationsTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Téléphone</th>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les réservations seront insérées ici via JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 SERVI-BOOK — Tous droits réservés</p>
+    </footer>
+
+    <!-- ===== SCRIPT JS ===== -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>
