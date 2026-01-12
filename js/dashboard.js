@@ -55,3 +55,4 @@ filterSelect.addEventListener("change", displayReservations);
 
 // Afficher les réservations au chargement
 displayReservations();
+
